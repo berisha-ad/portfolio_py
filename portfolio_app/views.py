@@ -6,7 +6,7 @@ def index(request):
     backend = backend_skill.objects.all()
     frontend = frontend_skill.objects.all()
     tools = tool.objects.all()
-    cv = file.objects.first()
+    cv = file.objects.all()
     return render(request, "portfolio/index.html", {
         "backend": backend,
         "frontend": frontend,
@@ -17,10 +17,8 @@ def index(request):
 
 def projects(request):
     projects = project.objects.all()
-    files = file.objects.first()
     return render(request, "portfolio/projects.html", {
-        "projects": projects,
-        "files": files
+        "projects": projects
     })
 
 
