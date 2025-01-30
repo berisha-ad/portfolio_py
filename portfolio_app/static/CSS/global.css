@@ -402,7 +402,7 @@ footer .logo {
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
     margin-bottom: 2rem;
 }
@@ -411,6 +411,7 @@ footer .logo {
     display: flex;
     gap: 0.5rem;
     margin-bottom: 1rem;
+    flex-wrap: wrap;
 }
 
 .skill {
@@ -437,7 +438,7 @@ footer .logo {
 .project-card img {
     width: 100%;
     object-fit: cover;
-    height: 17rem;
+    height: 10rem;
     border-radius: 0.5rem;
     margin-bottom: 1rem;
 }
