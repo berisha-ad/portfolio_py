@@ -46,9 +46,9 @@
                 <div class="project-card light-big">
                     <img src="{{ project.imagelink.url }}" alt="{{ project.title }}">
                     <div class="skills-wrapper">
-                    {% for skill in project.skills_list %}
-                    <span class="skill">{{ skill }}</span>
-                    {% endfor %}
+                        {% for skill in project.skills_list %}
+                        <span class="skill">{{ skill }}</span>
+                        {% endfor %}
                     </div>
                     <h3 class="allcaps-headline">{{ project.title }}</h2>
                     <p>{{ project.text }}</p>
