@@ -20,7 +20,7 @@ def projects(request):
 
     for sinproject in projects:
         sinproject.skills_list = [
-            skill.strip() for skill in project.skills.split(",") if skill.strip()]
+            skill.strip() for skill in sinproject.skills.split(",") if skill.strip()]
 
     return render(request, "portfolio/projects.html", {
         "projects": projects
