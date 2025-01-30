@@ -247,7 +247,8 @@ a {
     bottom: -20%;
     left: 0;
     transform: scale(0);
-    transition: all 150ms ease;
+    transform-origin: left;
+    transition: all 500ms ease;
 }
 .nav-link:hover::after,
 .nav-link.active::after{
@@ -636,11 +637,11 @@ footer .logo {
         height: 60vh;
     }
     .contact-icons a svg {
-        height: 30px;
-        width: 30px;
+        height: 35px;
+        width: 35px;
     }
     .contact-icons {
-        gap: 2rem;
+        gap: 1.5rem;
     }
 }
 
