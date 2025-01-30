@@ -17,8 +17,11 @@ def index(request):
 
 def projects(request):
     projects = project.objects.all()
+    skills = [skill.strip()
+              for skill in projects.skills.split(",") if skill.strip()]
     return render(request, "portfolio/projects.html", {
-        "projects": projects
+        "projects": projects,
+        "skills": skills
     })
 
 

@@ -45,10 +45,14 @@
                 {% for project in projects %}
                 <div class="project-card light-big">
                     <img src="{{ project.imagelink.url }}" alt="{{ project.title }}">
+                    <div class="skills-wrapper">
+                    {% for skill in skills %}
+                    <span class="skill">{% skill %}</span>
+                    {% endfor %}
+                    </div>
                     <h3 class="allcaps-headline">{{ project.title }}</h2>
                     <p>{{ project.text }}</p>
                     <p class="date">{{ project.date }}</p>
-                    <p class="date">{{ project.skills }}</p>
                     <a class="project-link nav-link" href="{{ project.link }}">Projekt besichtigen --></a>
                 </div>
                 {% endfor %}
