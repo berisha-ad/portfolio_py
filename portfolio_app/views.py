@@ -17,15 +17,8 @@ def index(request):
 
 def projects(request):
     projects = project.objects.all()
-
-    skills = set()
-    for proj in projects:
-        skills.update(skill.strip()
-                      for skill in proj.skills.split(",") if skill.strip())
-
     return render(request, "portfolio/projects.html", {
-        "projects": projects,
-        "skills": list(skills)
+        "projects": projects
     })
 
 
