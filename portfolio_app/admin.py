@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import project, backend_skill, frontend_skill, tool, file
+from .models import Project, Backend_skill, Frontend_skill, Tool, File
 
 
 class PostAdmin(admin.ModelAdmin):
@@ -15,8 +15,8 @@ class FileAdmin(admin.ModelAdmin):
     list_display = ("filename", "cvlink")
 
 
-admin.site.register(project, PostAdmin)
-admin.site.register(backend_skill, SkillAdmin)
-admin.site.register(frontend_skill, SkillAdmin)
-admin.site.register(tool, SkillAdmin)
-admin.site.register(file, FileAdmin)
+admin.site.register(Project, PostAdmin)
+admin.site.register(Backend_skill, SkillAdmin)
+admin.site.register(Frontend_skill, SkillAdmin)
+admin.site.register(Tool, SkillAdmin)
+admin.site.register(File, FileAdmin)

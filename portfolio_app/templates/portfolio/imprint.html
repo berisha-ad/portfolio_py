@@ -67,7 +67,11 @@
                 <li><a class="nav-link" href="mailto:adrianberisha0@gmail.com">Kontaktieren</a></li>
             </ul>
             <ul class="footer-link-wrapper">
-                <li><a class="nav-link" href="{% static "files/Lebenslauf.pdf" %}" download="Lebenslauf.pdf">Lebenslauf herunterladen</a></li>
+                {% if file %}
+                {% for file in file %}
+                <li><a class="nav-link" href="{{ file.cvlink.url }}" download="{{ file.filename }}">Lebenslauf herunterladen</a></li>
+                {% endfor %}
+                {% endif %}
                 <li><a class="nav-link" href="/imprint">Impressum</a></li>
             </ul>
         </div>

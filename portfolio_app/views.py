@@ -1,12 +1,12 @@
 from django.shortcuts import render
-from .models import project, backend_skill, frontend_skill, tool, file
+from .models import Project, Backend_skill, Frontend_skill, Tool, File
 
 
 def index(request):
-    backend = backend_skill.objects.all()
-    frontend = frontend_skill.objects.all()
-    tools = tool.objects.all()
-    cv = file.objects.all()
+    backend = Backend_skill.objects.all()
+    frontend = Frontend_skill.objects.all()
+    tools = Tool.objects.all()
+    cv = File.objects.all()
     return render(request, "portfolio/index.html", {
         "backend": backend,
         "frontend": frontend,
@@ -16,19 +16,21 @@ def index(request):
 
 
 def projects(request):
-    projects = project.objects.all()
+    projects = Project.objects.all().order_by('sort_order')
+    cv = File.objects.all()
 
     for sinproject in projects:
         sinproject.skills_list = [
             skill.strip() for skill in sinproject.skills.split(",") if skill.strip()]
 
     return render(request, "portfolio/projects.html", {
-        "projects": projects
+        "projects": projects,
+        "file": cv
     })
 
 
 def imprint(request):
-    files = file.objects.first()
+    cv = File.objects.all()
     return render(request, "portfolio/imprint.html", {
-        "files": files
+        "file": cv
     })

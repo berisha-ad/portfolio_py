@@ -244,7 +244,7 @@ a {
     height: 0.13rem;
     position: absolute;
     background-color: var(--body-text-color);
-    bottom: -20%;
+    bottom: -23%;
     left: 0;
     transform: scale(0);
     transform-origin: left;
@@ -493,7 +493,7 @@ footer .logo {
     .hero-section-home {
         flex-direction: column;
         justify-content: flex-end;
-        gap: 3rem;
+        gap: 2rem;
         text-align: center;
     }
     .container {
@@ -572,6 +572,7 @@ footer .logo {
     }
     .project-grid {
         grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 1.7rem;
     }
 
     .link-wrapper{
@@ -635,7 +636,14 @@ footer .logo {
     }
 
     .hero-section-home {
-        height: 60vh;
+        height: 62vh;
+        gap: 1.5rem;
+    }
+    .hero-section-home h1 {
+        margin-bottom: 1.5rem;
+    }
+    .contact-icons {
+        margin-top: 1.5rem;
     }
     .contact-icons a svg {
         height: 35px;
@@ -643,6 +651,11 @@ footer .logo {
     }
     .contact-icons {
         gap: 1.5rem;
+    }
+    .hero-section-projects {
+        height: 40vh;
+        padding-block: 5rem 3rem;
+        justify-content: flex-end;
     }
 }
 
