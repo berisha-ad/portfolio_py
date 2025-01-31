@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Seite nicht gefunden</title>
+    <link rel="stylesheet" href="{% static "CSS/reset.css" %}">
+    <link rel="stylesheet" href="{% static "CSS/global.css" %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script src="{% static "JS/cursor.js" %}" defer></script>
+    <script src="{% static "JS/main.js" %}" defer></script>
+</head>
+<body>
+    <div class="left"></div>
+    <div class="right"></div>
+    <div id="cursor"></div>
+    <header class="navbar-wrapper">
+        <nav class="navbar container">
+            <ul class="link-wrapper" id="linkWrapper">
+                <li><a class="logo" href="/">Adrian Berisha</a></li>
+                <li><a class="nav-link" href="/">Startseite</a></li>
+                <li><a class="nav-link" href="/projects">Projekte</a></li>
+                <li><a class="button" href="mailto:adrianberisha0@gmail.com">Kontaktieren</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">menu</div>
+        </nav>
+    </header>
+    <main>
+        <section class="error-section container">
+            <div class="error-wrapper">
+                <h1>
+                    Leider wurde die gewünschte Seite nicht gefunden!
+                </h1>
+                <a href="/">Zur Startseite zurückkehren</a>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-wrapper container">
+            <a class="logo" href="/">Adrian Berisha</a>
+            <ul class="footer-link-wrapper">
+                <li><a class="nav-link" href="https://github.com/berisha-ad">Github</a></li>
+                <li><a class="nav-link" href="https://www.linkedin.com/in/adrian-berisha-b7a03425b/">LinkedIn</a></li>
+                <li><a class="nav-link" href="https://www.instagram.com/berisha_ad/">Instagram</a></li>
+            </ul>
+            <ul class="footer-link-wrapper">
+                <li><a class="nav-link" href="/">Home</a></li>
+                <li><a class="nav-link" href="/projects">Projekte</a></li>
+                <li><a class="nav-link" href="mailto:adrianberisha0@gmail.com">Kontaktieren</a></li>
+            </ul>
+            <ul class="footer-link-wrapper">
+                {% if file %}
+                {% for file in file %}
+                <li><a class="nav-link" href="{{ file.cvlink.url }}" download="{{ file.filename }}">Lebenslauf herunterladen</a></li>
+                {% endfor %}
+                {% endif %}
+                <li><a class="nav-link" href="/imprint">Impressum</a></li>
+            </ul>
+        </div>
+        <p class="rights-reserved">© 2024 Adrian Berisha. Alle Rechte vorbehalten.</p>
+    </footer>
+</body>
+</html>
