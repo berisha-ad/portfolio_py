@@ -20,9 +20,9 @@
         <nav class="navbar container">
             <ul class="link-wrapper" id="linkWrapper">
                 <li><a class="logo" href="/">Adrian Berisha</a></li>
-                <li><a class="nav-link" href="/">Startseite</a></li>
-                <li><a class="nav-link" href="/projects">Projekte</a></li>
-                <li><a class="button" href="mailto:adrianberisha0@gmail.com">Kontaktieren</a></li>
+                <li><a class="nav-link" href="/">Home</a></li>
+                <li><a class="nav-link" href="/projects">Projects</a></li>
+                <li><a class="button" href="mailto:adrianberisha0@gmail.com">Contact</a></li>
             </ul>
             <div class="hamburger" id="hamburger">menu</div>
         </nav>
@@ -31,15 +31,15 @@
         <section class="imprint-section container">
             <div class="imprint-wrapper">
                 <h1>
-                    Impressum
+                    Imprint
                 </h1>
                 <p>Adrian Berisha</p>
                 <div>
-                    <p class="skills-headline">Anschrift</p>
-                    <p>Kegelgasse 34-38 1030 Wien</p>
+                    <p class="skills-headline">Address</p>
+                    <p>Kegelgasse 34-38 1030 Vienna</p>
                 </div>
                 <div>
-                    <p class="skills-headline">Telefon</p>
+                    <p class="skills-headline">Phone</p>
                     <p>+43 650 990 776 5</p>
                 </div>
                 <div>
@@ -47,7 +47,7 @@
                     <p>adrianberisha0@gmail.com</p>
                 </div>
                 <div>
-                    <p class="skills-headline">Webseite</p>
+                    <p class="skills-headline">Website</p>
                     <p>www.adrianberisha.at</p>
                 </div>
             </div>
@@ -63,19 +63,19 @@
             </ul>
             <ul class="footer-link-wrapper">
                 <li><a class="nav-link" href="/">Home</a></li>
-                <li><a class="nav-link" href="/projects">Projekte</a></li>
-                <li><a class="nav-link" href="mailto:adrianberisha0@gmail.com">Kontaktieren</a></li>
+                <li><a class="nav-link" href="/projects">Projects</a></li>
+                <li><a class="nav-link" href="mailto:adrianberisha0@gmail.com">Contact</a></li>
             </ul>
             <ul class="footer-link-wrapper">
                 {% if file %}
                 {% for file in file %}
-                <li><a class="nav-link" href="{{ file.cvlink.url }}" download="{{ file.filename }}">Lebenslauf herunterladen</a></li>
+                <li><a class="nav-link" href="{{ file.cvlink.url }}" download="{{ file.filename }}">Download CV</a></li>
                 {% endfor %}
                 {% endif %}
-                <li><a class="nav-link" href="/imprint">Impressum</a></li>
+                <li><a class="nav-link" href="/imprint">Imprint</a></li>
             </ul>
         </div>
-        <p class="rights-reserved">© 2024 Adrian Berisha. Alle Rechte vorbehalten.</p>
+        <p class="rights-reserved">© 2025 Adrian Berisha. All rights reserved.</p>
     </footer>
 </body>
 </html>

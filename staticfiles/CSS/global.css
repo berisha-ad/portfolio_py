@@ -210,6 +210,14 @@ a {
     opacity: 1;
 }
 
+.about-text {
+    line-height: 1.6em;
+    max-width: 53rem;
+}
+
+.about-section {
+    padding-block: 8rem 2rem;
+}
 
 /* ---------------------------------------------------
                         NAVBAR 
@@ -323,6 +331,7 @@ a {
 .skills-headline {
     font-size: 1rem;
     color: #444;
+    margin-bottom: 0.5rem;
 }
 
 .hover-arrow {

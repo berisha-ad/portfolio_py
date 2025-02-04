@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Seite nicht gefunden</title>
+    <title>404 - Page not found</title>
     <link rel="stylesheet" href="{% static "CSS/reset.css" %}">
     <link rel="stylesheet" href="{% static "CSS/global.css" %}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
@@ -20,9 +20,9 @@
         <nav class="navbar container">
             <ul class="link-wrapper" id="linkWrapper">
                 <li><a class="logo" href="/">Adrian Berisha</a></li>
-                <li><a class="nav-link" href="/">Startseite</a></li>
-                <li><a class="nav-link" href="/projects">Projekte</a></li>
-                <li><a class="button" href="mailto:adrianberisha0@gmail.com">Kontaktieren</a></li>
+                <li><a class="nav-link" href="/">Home</a></li>
+                <li><a class="nav-link" href="/projects">Projects</a></li>
+                <li><a class="button" href="mailto:adrianberisha0@gmail.com">Contact</a></li>
             </ul>
             <div class="hamburger" id="hamburger">menu</div>
         </nav>
@@ -31,9 +31,9 @@
         <section class="error-section container">
             <div class="error-wrapper">
                 <h1>
-                    Leider wurde die gewünschte Seite nicht gefunden!
+                    Unfortunately, the requested page was not found!
                 </h1>
-                <a href="/">Zur Startseite zurückkehren</a>
+                <a href="/">Return to the homepage</a>
         </section>
     </main>
     <footer>
@@ -47,18 +47,18 @@
             <ul class="footer-link-wrapper">
                 <li><a class="nav-link" href="/">Home</a></li>
                 <li><a class="nav-link" href="/projects">Projekte</a></li>
-                <li><a class="nav-link" href="mailto:adrianberisha0@gmail.com">Kontaktieren</a></li>
+                <li><a class="nav-link" href="mailto:adrianberisha0@gmail.com">Contact</a></li>
             </ul>
             <ul class="footer-link-wrapper">
                 {% if file %}
                 {% for file in file %}
-                <li><a class="nav-link" href="{{ file.cvlink.url }}" download="{{ file.filename }}">Lebenslauf herunterladen</a></li>
+                <li><a class="nav-link" href="{{ file.cvlink.url }}" download="{{ file.filename }}">Download CV</a></li>
                 {% endfor %}
                 {% endif %}
-                <li><a class="nav-link" href="/imprint">Impressum</a></li>
+                <li><a class="nav-link" href="/imprint">Imprint</a></li>
             </ul>
         </div>
-        <p class="rights-reserved">© 2024 Adrian Berisha. Alle Rechte vorbehalten.</p>
+        <p class="rights-reserved">© 2025 Adrian Berisha. All rights reserved.</p>
     </footer>
 </body>
 </html>
