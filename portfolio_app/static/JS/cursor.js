@@ -33,5 +33,29 @@ cards.forEach((card) => {
 });
 
 
+const tl = gsap.timeline();
+
+
+
+
+tl.to({}, { duration: 1 });
+
+tl.fromTo('.loading-logo',
+    { opacity: 0 },
+    { opacity: 1, duration: 0.5, ease: "power2.out" }
+)
+tl.to('.loading-logo', {
+    opacity: 0,
+    delay: 1,
+    duration: 0.5,
+    ease: "power2.out"
+});
+
+tl.to('.loading-screen', {
+    width: 0,
+    duration: 1.5,
+    ease: "power2.out"
+})
+
 
 
