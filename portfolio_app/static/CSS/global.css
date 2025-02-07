@@ -58,9 +58,10 @@ body {
 }
 
 .loading-logo {
-    color: white;
+    color: var(--accent-color);
     font-size: 30px;
     opacity: 0;
+    font-family: 'SourceCode', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, p {
