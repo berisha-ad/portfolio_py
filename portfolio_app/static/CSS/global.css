@@ -53,7 +53,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #14211d;
+    background: linear-gradient(to right bottom, #14211d , #0f1815);
     z-index: 1000;
 }
 
@@ -238,7 +238,7 @@ a {
 }
 
 .about-section {
-    padding-block: 8rem 2rem;
+    padding-block: 6rem 2rem;
 }
 
 /* ---------------------------------------------------
@@ -303,6 +303,10 @@ a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
     margin-bottom: 2rem;
+}
+
+.cv-section-home h2 {
+    margin-bottom: 1rem;
 }
 
 .cv-card {
@@ -591,6 +595,15 @@ footer .logo {
     
     .cv-grid {
         grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 1.7rem;
+    }
+
+    .m-t-2 {
+        margin-top: 4rem;
+    }
+
+    .cv-section-home h2 {
+        font-size: 1.8rem;
     }
 
     /* Skills Section */

@@ -35,10 +35,11 @@ cards.forEach((card) => {
 
 const tl = gsap.timeline();
 
+const isMobile = window.innerWidth < 768;
+const duration = isMobile ? 0.7 : 1.3;
 
 
-
-tl.to({}, { duration: 1 });
+tl.to({}, { duration: 0.5 });
 
 tl.fromTo('.loading-logo',
     { opacity: 0 },
@@ -53,7 +54,7 @@ tl.to('.loading-logo', {
 
 tl.to('.loading-screen', {
     width: 0,
-    duration: 1.5,
+    duration: duration,
     ease: "power2.out"
 })
 
