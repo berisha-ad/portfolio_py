@@ -114,7 +114,7 @@ em {
     text-transform: uppercase;
     letter-spacing: 5px;
     color: var(--body-text-color);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .button {
@@ -293,6 +293,10 @@ a {
     padding-block: 5rem;
 }
 
+.address {
+    color: #8a8a8a;
+}
+
 .location-headline {
     font-size: 1.2rem;
     color: var(--body-text-color);
@@ -318,8 +322,12 @@ a {
     border: var(--border-color) solid 0.05rem;
 }
 
+.span-2 {
+    grid-column: span 2;
+}
+
 .date {
-    color: #878787;
+    color: #5d5d5d;
     margin-top: 0.3rem;
     font-size: 0.9rem;
 }
@@ -330,6 +338,7 @@ a {
     letter-spacing: normal;
     color: #878787;
 }
+
 
  /* ---------------------------------------------------
                     SKILLS SECTION 
@@ -592,6 +601,14 @@ footer .logo {
 @media (max-device-width: 700px) {
 
     /* CV Section */
+
+    .span-2 {
+        grid-column: unset;
+    }
+
+    .allcaps-headline {
+        font-size: 1.2rem;
+    }
     
     .cv-grid {
         grid-template-columns: repeat(1, minmax(0, 1fr));
